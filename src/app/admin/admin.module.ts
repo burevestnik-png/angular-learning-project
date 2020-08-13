@@ -21,7 +21,10 @@ import { EditPageComponent } from './edit-page/edit-page.component';
       {
         path: '', component: AdminLayoutComponent, children: [
           { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
-          { path: 'login', component: LoginPageComponent }
+          { path: 'login', component: LoginPageComponent },
+          { path: 'dashboard', component: DashboardPageComponent },
+          { path: 'create', component: CreatePageComponent },
+          { path: 'post/:id/edit', component: EditPageComponent },
         ]
       }
     ])
