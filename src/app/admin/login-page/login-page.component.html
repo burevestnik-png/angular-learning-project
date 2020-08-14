@@ -4,8 +4,16 @@
 >
   <h2>Enter admin panel</h2>
 
-  <div *ngIf="auth.error$ | async as error" class="alert-danger alert">
+  <div *ngIf="auth.error$ | async as error"
+       class="alert-danger alert"
+  >
     {{ error }}
+  </div>
+
+  <div *ngIf="message"
+       class="alert-info alert"
+  >
+    {{ message }}
   </div>
 
   <div class="form-control"
