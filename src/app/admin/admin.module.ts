@@ -1,18 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgModule, Provider } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { AuthInterceptor } from '../shared/auth.interceptor';
 import { SharedModule } from '../shared/shared.module';
-import { AdminLayoutComponent } from './shared/components/admin-layout/admin-layout.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { CreatePageComponent } from './create-page/create-page.component';
+import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { AdminLayoutComponent } from './shared/components/admin-layout/admin-layout.component';
+import { SearchPipe } from './shared/search.pipe';
 import { AuthGuard } from './shared/services/auth.guard';
-import { AuthService } from './shared/services/auth.service';
-
 
 
 @NgModule({
@@ -21,7 +18,8 @@ import { AuthService } from './shared/services/auth.service';
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
