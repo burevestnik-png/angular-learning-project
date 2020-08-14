@@ -26,6 +26,10 @@ export class LoginPageComponent implements OnInit {
       if (params['loginAgain']) {
         this.message = 'Please, enter data'
       }
+
+      if (params['authFailed']) {
+        this.message = 'Session is expired, please relogin'
+      }
     })
 
     this.form = new FormGroup({

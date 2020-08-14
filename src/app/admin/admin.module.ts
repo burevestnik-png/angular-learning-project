@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AuthInterceptor } from '../shared/auth.interceptor';
 import { SharedModule } from '../shared/shared.module';
 import { AdminLayoutComponent } from './shared/components/admin-layout/admin-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -10,6 +12,8 @@ import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { AuthGuard } from './shared/services/auth.guard';
 import { AuthService } from './shared/services/auth.service';
+
+
 
 @NgModule({
   declarations: [
@@ -40,7 +44,6 @@ import { AuthService } from './shared/services/auth.service';
     RouterModule
   ],
   providers: [
-    AuthService,
     AuthGuard
   ]
 })
