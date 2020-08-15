@@ -1,23 +1,26 @@
-<div class="post">
-  <div class="header">
-    <h1>title</h1>
+<div *ngIf="post$ | async as post; else loading">
+  <div class="post">
+    <div class="header">
+      <h1>{{ post.title }}</h1>
 
-    <button class="btn btn-link"
-            routerLink="/"
-    >
-      On main
-    </button>
-  </div>
+      <button class="btn btn-link"
+              routerLink="/"
+      >
+        On main
+      </button>
+    </div>
 
-  <div class="info">
-    <strong>Author</strong>
-    <small>date</small>
-  </div>
+    <div class="info">
+      <strong>{{ post.author }}</strong>
+      <small>{{ post.date | date:'medium':null:'ru' }}</small>
+    </div>
 
-  <div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut commodi consectetur, culpa cum delectus deleniti deserunt dignissimos doloribus ducimus error facere illo itaque laudantium minus modi nam natus nisi obcaecati optio perferendis, quo repellat saepe? Accusamus adipisci consequatur, culpa dicta enim error est hic illum, nisi omnis quia sequi.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut commodi consectetur, culpa cum delectus deleniti deserunt dignissimos doloribus ducimus error facere illo itaque laudantium minus modi nam natus nisi obcaecati optio perferendis, quo repellat saepe? Accusamus adipisci consequatur, culpa dicta enim error est hic illum, nisi omnis quia sequi.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut commodi consectetur, culpa cum delectus deleniti deserunt dignissimos doloribus ducimus error facere illo itaque laudantium minus modi nam natus nisi obcaecati optio perferendis, quo repellat saepe? Accusamus adipisci consequatur, culpa dicta enim error est hic illum, nisi omnis quia sequi.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut commodi consectetur, culpa cum delectus deleniti deserunt dignissimos doloribus ducimus error facere illo itaque laudantium minus modi nam natus nisi obcaecati optio perferendis, quo repellat saepe? Accusamus adipisci consequatur, culpa dicta enim error est hic illum, nisi omnis quia sequi.</p>
+    <div>
+      <quill-view-html [content]="post.text"></quill-view-html>
+    </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <p class="text-center">Loading</p>
+</ng-template>
