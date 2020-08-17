@@ -1,27 +1,22 @@
-# AngularLearningProject
+# Angular learning project 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+> This is simple project to study Angular 10.
+> Back was made with Firebase
 
-## Development server
+[![GitHub stars][stars-shield]][stars-url]
+[![GitHub issues][issues-shield]][issues-url]
+[![GitHub][license-shield]][license-url]
+![GitHub repo size](https://img.shields.io/github/repo-size/burevestnik-png/angular-learning-project)
+![GitHub last commit](https://img.shields.io/github/last-commit/burevestnik-png/angular-learning-project)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## About the project
+Stack of technologies:
+- Angular 10
+- Typescript
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[stars-shield]: https://img.shields.io/github/stars/burevestnik-png/angular-learning-project?style=social
+[stars-url]: https://github.com/burevestnik-png/angular-learning-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/burevestnik-png/angular-learning-project
+[issues-url]: https://github.com/burevestnik-png/angular-learning-project/issues
+[license-shield]: https://img.shields.io/github/license/burevestnik-png/angular-learning-project
+[license-url]: https://github.com/burevestnik-png/angular-learning-project/blob/master/LICENSE
